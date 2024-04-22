@@ -9,15 +9,15 @@ def find_interval(x, xp):
 
 def evaluate_cubic_spline(x, y, h, z, xp, i):
     # Evaluate the cubic spline at xp for the interval i
-    C = (y[i] - y[i-1] + h**2 * (z[i-1] - z[i]) / 6) / h
+    C = (y[i] - y[i-1] + h**2 * (z[i-1]-z[i]) / 6) / h
     D = y[i-1] - h**2 * z[i-1] / 6
-    result = z[i-1]*(x[i]-xp)**3 / (6*h) + z[i]*(xp-x[i-1]**3) / (6*h) + C*(xp-x[i-1]) + D
+    result = z[i-1]*(x[i]-xp)**3 / (6*h) + z[i]*(xp-x[i-1])**3 / (6*h) + C*(xp-x[i-1]) + D
     return result
 
 def tridiagonal_solver(a, b, c, d):
     n = len(d)
-    w= np.zeros(n-1,float)
-    g= np.zeros(n, float)
+    w = np.zeros(n-1,float)
+    g = np.zeros(n, float)
     p = np.zeros(n,float)
     
     w[0] = c[0]/b[0]
@@ -45,9 +45,9 @@ def cubic_spline_interpolation(x, y, xp):
     alpha = np.zeros(n)
     beta = np.zeros(n)
     b = np.zeros(n)
-
+    
     b[1] = (y[2] - 2*y[1] + y[0])/h - h*z[0]/6
-    b[n-1] = (y[n] - 2*y[n-1] + y[n-2])/h - h * z[n] / 6 
+    b[n-1] = (y[n] - 2*y[n-1] + y[n-2])/h - h*z[n]/6 
 
     for i in range (1, n):
         alpha[i] = 2*h/3
