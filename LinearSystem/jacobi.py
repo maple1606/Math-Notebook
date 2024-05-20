@@ -14,5 +14,5 @@ def jacobi(A, b):
     return x
 
 solution = jacobi(A, b)
-print("Solution:")
+print("Solution using Jacobi iteration:")
 print(solution)

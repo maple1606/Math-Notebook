@@ -15,5 +15,5 @@ def gauss_seidel(A, b):
     return x
 
 solution = gauss_seidel(A, b)
-print("Solution:")
+print("Solution using Gauss-Seidel iteration:")
 print(solution)
