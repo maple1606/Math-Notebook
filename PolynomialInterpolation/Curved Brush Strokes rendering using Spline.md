@@ -26,9 +26,5 @@ Rendering curved brushstrokes using splines is a technique commonly used in digi
 -  Apply additional effects like smudging, blending, texture, etc to achieve the desired aesthetic effect.
 ## Reference
 [1 - Stimulating artistic brushstrokes](https://www.researchgate.net/publication/228801078_Simulating_artistic_brushstrokes_using_interval_splines)
-<<<<<<< HEAD
 
 [2 - Spline Types](https://github.com/ejmahler/SplineLibrary/blob/master/docs/SplineTypes.md)
-=======
-[2 - Spline Types](https://github.com/ejmahler/SplineLibrary/blob/master/docs/SplineTypes.md)
->>>>>>> e3716fc6aa702e21215860a6502b55e9718bb832
